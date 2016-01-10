@@ -23,10 +23,10 @@ begin
 
         -- else, if updating, check that the initial stock was non-zero when needed:
         if updating then
-            if (:old.ItemCount == 0 and :new.ItemCount > 0) then
+            if (:old.ItemCount = 0 and :new.ItemCount > 0) then
                 update Class set CategoryCount = CategoryCount + 1
                     where CLID = link.CLID;
-            else if (:old.ItemCount > 0 and :new.ItemCount == 0)
+            elsif (:old.ItemCount > 0 and :new.ItemCount = 0) then
                 update Class set CategoryCount = CategoryCount - 1
                     where CLID = link.CLID;
             end if;
@@ -38,4 +38,3 @@ begin
         end if;
     end loop;
 end;
-

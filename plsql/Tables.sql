@@ -10,10 +10,10 @@ create table Item (
     Name varchar2(50) unique,
 
     -- Description is the description of the Item.
-    Description varchar2(1000));
+    Description varchar2(1000),
 
     -- Stock is the number of this Item in stock.
-    Sock number(6) not null,
+    Stock number(6) not null);
 
 
 -- Category is the table representing a Category of items.
@@ -26,7 +26,7 @@ create table Category (
 
     -- ItemCount is the number representing the types of items in the Category.
     -- NOTE: ItemCount is automatically managed by an insert trigger on Item.
-    ItemCount number(4) not null constraint check(ItemCount >= 0));
+    ItemCount number(4) not null constraint itemcount_const check(ItemCount >= 0));
 
 -- CL2CA is just the table for linking Categories to Classes.
 create table CL2CA (
@@ -51,4 +51,4 @@ create table Class (
 
     -- CategoryCount is the number of categories within this Class.
     -- NOTE: CategoryCount is automatically managed by an insert trigger.
-    CategoryCount number(4) not null constraint check(CategoryCount >= 0));
+    CategoryCount number(4) not null constraint categorycount_constr check(CategoryCount >= 0));

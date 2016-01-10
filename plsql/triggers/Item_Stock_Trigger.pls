@@ -13,17 +13,20 @@ begin
 
     -- else, if updating, check that the initial stock was non-zero when needed:
     if updating then
-        if (:old.Stock == 0 and :new.Stock > 0) then
-            update Category set ItemCount = ItemCount + 1
+        if (:old.Stock = 0 and :new.Stock > 0) then
+            update Category
+                set ItemCount = ItemCount + 1
                 where Category.CID = :old.CID;
-        else if (:old.Stock > 0 and :new.Stock == 0) then
-            update Category set ItemCount = ItemCount - 1
+        elsif (:old.Stock > 0 and :new.Stock = 0) then
+            update Category
+                set ItemCount = ItemCount - 1
                 where Category.CID = :old.CID;
         end if;
     end if;
 
     if (deleting and :old.Stock != 0) then
-        update Category set ItemCount = ItemCount - 1
+        update Category
+            set ItemCount = ItemCount - 1
             where Category.CID = :old.CID;
     end if;
     commit;
