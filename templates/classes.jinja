@@ -1,0 +1,12 @@
++++
+Description = ""
+FeaturedImage = ""
+Tags = []
+date = "2016-01-11T02:05:47+02:00"
+title = "Classes"
+
++++
+{% for class in classes %}
+## {{ class.name.capitalize() }} - {{ class.category_count }} categories
+***
+{% endfor %}

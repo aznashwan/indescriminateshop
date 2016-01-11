@@ -1,0 +1,15 @@
++++
+Description = ""
+FeaturedImage = ""
+Tags = []
+date = "2016-01-11T02:06:02+02:00"
+title = "Items"
+
++++
+{% for item in items %}
+# {{ item.name.capitalize() }}
+#### Category: {{ item.category_name }}
+###### Stock: {{ item.stock }}
+{{ item.description }}
+***
+{% endfor %}

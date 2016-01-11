@@ -1,0 +1,4 @@
+baseurl = "http://192.168.137.174:1313/"
+languageCode = "en-us"
+title = "Indescriminate Shop"
+theme = "allegiant"
