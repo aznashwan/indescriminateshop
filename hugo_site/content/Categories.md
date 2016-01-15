@@ -7,15 +7,12 @@ title = "Categories"
 
 +++
 
-## Fruits - 3 items
+## Phones - 2 items
 ***
 
-## Meat - 2 items
+## Laptops - 2 items
 ***
 
-## Phones - 1 items
-***
-
-## Laptops - 1 items
+## Fruits - 2 items
 ***
 

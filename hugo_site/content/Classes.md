@@ -7,8 +7,11 @@ title = "Classes"
 
 +++
 
-## Food - 2 categories
+## Electronics - 2 categories
 ***
 
-## Electronics - 2 categories
+## Food - 1 categories
+***
+
+## Aa - 0 categories
 ***
